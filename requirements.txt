@@ -1,0 +1,3 @@
+cplex==12.8.0.0
+docplex==2.7.113
+docutils==0.14
