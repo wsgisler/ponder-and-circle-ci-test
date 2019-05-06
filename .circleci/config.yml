@@ -7,13 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
       - image: circleci/python:3.6.1
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
 
     working_directory: ~/repo
 
@@ -43,8 +37,9 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python -m unittest test/prime_number_test.py
+            python -m unittest test/*_test.py
 
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+      - run:
+          name: call a URL to trigger some action on a server
+          command: |
+            curl http://66.129.87.20:5000/optimizer/clusterreport/
