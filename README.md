@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a small Cplex based solver to solve the April 2019 Solver challenge:
+This is a small Cplex based solver to solve the April 2019 Ponder Challenge:
 
 https://www.research.ibm.com/haifa/ponderthis/challenges/April2019.html
 
